@@ -1,7 +1,7 @@
 {
   "name": "gulp-aigis",
   "description": "gulp plugin for aigis",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,7 +19,7 @@
   "dependencies": {
     "gulp-util": "^3.0.6",
     "lodash": "^3.10.0",
-    "node-aigis": "pxgrid/aigis#v0.1.3",
+    "node-aigis": "^0.1.1",
     "through2": "^2.0.0"
   }
 }
