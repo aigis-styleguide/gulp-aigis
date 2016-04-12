@@ -6,13 +6,14 @@ var path = require("path");
 module.exports = function(options) {
   return through.obj(function(file, enc, cb) {
     var aigis;
-    gutil.log("config file: " + path.resolve(file.path));
+    var configFilePath = path.resolve(file.path);
+    gutil.log("config file: " + configFilePath);
     try {
-      aigis = new Aigis(file.contents);
+      aigis = new Aigis(configFilePath);
       aigis.run().then(cb);
     }
     catch(e) {
-      this.emit("error", new gutil.PluginError("gulp-aigis", "Parse Failed."));
+      this.emit("error", new gutil.PluginError("gulp-aigis", e.message));
       cb();
     }
 

@@ -33,3 +33,5 @@ config.yml
 test.css
 docs
 gulpfile.js
+aigis_assets
+template_ejs
